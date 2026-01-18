@@ -159,6 +159,13 @@ The scanner includes automatic update checking. Manual update:
 git pull origin master
 pip3 install --upgrade -r requirements.txt
 
+if error use command
+
+cd AdvancedScanner
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
 
 
 🤝Contributing
