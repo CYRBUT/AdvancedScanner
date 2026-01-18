@@ -29,7 +29,7 @@
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/AdvancedScanner.git
+git clone https://github.com/CYRBUT/AdvancedScanner.git
 cd AdvancedScanner
 
 
@@ -173,10 +173,7 @@ Authors
 Security Research Team
 • Advanced Scanner Development Group
 Support
-GitHub Issues: https://github.com/yourusername
-/AdvancedScanner/issues
-• Documentation: https://github.com/yourusername
-/AdvancedScanner/wiki
+GitHub Issues: https://github.com/CYRBUT/AdvancedScanner/issues
 Acknowledgments
 • OWASP for vulnerability references
 · Security research community
