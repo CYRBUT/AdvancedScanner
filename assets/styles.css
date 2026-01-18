@@ -1,0 +1,532 @@
+/* ===== LOG OUTPUT ===== */
+.log-output {
+    font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, 
+        rgba(10, 15, 20, 0.95), 
+        rgba(15, 20, 30, 0.95));
+    border: 2px solid #2a3b52;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.log-entry {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 6px;
+    background: linear-gradient(90deg, 
+        rgba(30, 40, 55, 0.8), 
+        rgba(25, 35, 50, 0.8));
+    border-left: 4px solid #4a90e2;
+    transition: all 0.2s ease;
+    border-bottom: none;
+}
+
+.log-entry:hover {
+    background: linear-gradient(90deg, 
+        rgba(40, 50, 70, 0.9), 
+        rgba(35, 45, 65, 0.9));
+    transform: translateX(3px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.log-timestamp {
+    color: #88c0d0;
+    margin-right: 15px;
+    font-weight: 600;
+    font-family: 'Cascadia Code', monospace;
+    background: rgba(45, 55, 75, 0.7);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(100, 150, 200, 0.3);
+}
+
+.log-info {
+    color: #81a1c1;
+    font-weight: 500;
+    text-shadow: 0 0 2px rgba(129, 161, 193, 0.3);
+}
+
+.log-success {
+    color: #a3be8c;
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(163, 190, 140, 0.3);
+    background: linear-gradient(90deg, 
+        rgba(163, 190, 140, 0.15), 
+        transparent);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.log-warning {
+    color: #ebcb8b;
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(235, 203, 139, 0.3);
+    background: linear-gradient(90deg, 
+        rgba(235, 203, 139, 0.15), 
+        transparent);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.log-error {
+    color: #bf616a;
+    font-weight: 700;
+    text-shadow: 0 0 2px rgba(191, 97, 106, 0.3);
+    background: linear-gradient(90deg, 
+        rgba(191, 97, 106, 0.15), 
+        transparent);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.log-critical {
+    color: #bf616a;
+    font-weight: 800;
+    text-shadow: 
+        0 0 5px rgba(191, 97, 106, 0.5),
+        0 0 10px rgba(191, 97, 106, 0.3);
+    background: linear-gradient(90deg, 
+        rgba(191, 97, 106, 0.25), 
+        rgba(191, 97, 106, 0.1));
+    padding: 4px 8px;
+    border-radius: 4px;
+    border-left: 4px solid #bf616a;
+    animation: criticalFlash 1.5s infinite;
+    position: relative;
+}
+
+@keyframes criticalFlash {
+    0%, 100% { 
+        background: linear-gradient(90deg, 
+            rgba(191, 97, 106, 0.25), 
+            rgba(191, 97, 106, 0.1));
+    }
+    50% { 
+        background: linear-gradient(90deg, 
+            rgba(191, 97, 106, 0.35), 
+            rgba(191, 97, 106, 0.2));
+    }
+}
+
+/* ===== VULNERABILITY CARDS ===== */
+.vuln-card {
+    background: linear-gradient(135deg, 
+        #2d3646 0%, 
+        #1e2532 100%);
+    border: 2px solid;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 6px 20px rgba(0, 0, 0, 0.4),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.vuln-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.vuln-card.critical {
+    border-color: #bf616a;
+    background: linear-gradient(135deg, 
+        #3a2431 0%, 
+        #2a1822 100%);
+}
+
+.vuln-card.high {
+    border-color: #d08770;
+    background: linear-gradient(135deg, 
+        #3a2d29 0%, 
+        #2a211e 100%);
+}
+
+.vuln-card.medium {
+    border-color: #ebcb8b;
+    background: linear-gradient(135deg, 
+        #3a3629 0%, 
+        #2a281e 100%);
+}
+
+.vuln-card.low {
+    border-color: #a3be8c;
+    background: linear-gradient(135deg, 
+        #2d3629 0%, 
+        #1e251e 100%);
+}
+
+.vuln-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vuln-title {
+    color: #d8dee9;
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vuln-title::before {
+    content: '⚠';
+    font-size: 1.2em;
+}
+
+.vuln-card.critical .vuln-title::before {
+    content: '🔥';
+    color: #bf616a;
+}
+
+.vuln-card.high .vuln-title::before {
+    content: '⚡';
+    color: #d08770;
+}
+
+.vuln-card.medium .vuln-title::before {
+    content: '⚠';
+    color: #ebcb8b;
+}
+
+.vuln-card.low .vuln-title::before {
+    content: 'ℹ';
+    color: #a3be8c;
+}
+
+.vuln-risk {
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.85em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid;
+}
+
+.risk-critical {
+    background: linear-gradient(135deg, #bf616a, #a94451);
+    color: #ffffff;
+    border-color: #bf616a;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.risk-high {
+    background: linear-gradient(135deg, #d08770, #b56a55);
+    color: #ffffff;
+    border-color: #d08770;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.risk-medium {
+    background: linear-gradient(135deg, #ebcb8b, #d4b06d);
+    color: #2e3440;
+    border-color: #ebcb8b;
+}
+
+.risk-low {
+    background: linear-gradient(135deg, #a3be8c, #8aa776);
+    color: #2e3440;
+    border-color: #a3be8c;
+}
+
+.vuln-details {
+    font-size: 0.95em;
+    color: #d8dee9;
+    line-height: 1.6;
+}
+
+.vuln-details p {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    border-left: 3px solid #4c566a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.vuln-details p:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-left-color: #5e81ac;
+}
+
+.vuln-details p::before {
+    content: '→';
+    color: #81a1c1;
+    font-weight: bold;
+}
+
+.vuln-details strong {
+    color: #88c0d0;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.vuln-details code {
+    background: rgba(0, 0, 0, 0.4);
+    color: #d8dee9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid #4c566a;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-container {
+    margin: 30px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, 
+        rgba(30, 35, 45, 0.9), 
+        rgba(25, 30, 40, 0.9));
+    border-radius: 12px;
+    border: 2px solid #3b4252;
+    box-shadow: 
+        inset 0 2px 10px rgba(0, 0, 0, 0.5),
+        0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #d8dee9;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 28px;
+    background: #2e3440;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #3b4252;
+    box-shadow: 
+        inset 0 2px 8px rgba(0, 0, 0, 0.7),
+        0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, 
+        #5e81ac 0%, 
+        #81a1c1 50%, 
+        #88c0d0 100%);
+    width: 0%;
+    transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    animation: progressShine 2.5s linear infinite;
+}
+
+@keyframes progressShine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px;
+    color: #88c0d0;
+    font-size: 0.95em;
+    background: linear-gradient(135deg, 
+        rgba(30, 35, 45, 0.9), 
+        rgba(25, 30, 40, 0.9));
+    border-top: 2px solid #3b4252;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer a {
+    color: #81a1c1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #88c0d0;
+    text-decoration: underline;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(25px) scale(0.98); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e3440;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, 
+        #5e81ac 0%, 
+        #81a1c1 50%, 
+        #88c0d0 100%);
+    border-radius: 8px;
+    border: 2px solid #2e3440;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, 
+        #81a1c1 0%, 
+        #88c0d0 50%, 
+        #8fbcbb 100%);
+}
+
+/* ===== TERMINAL EFFECT ===== */
+.terminal-text {
+    font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+    color: #a3be8c;
+    background: rgba(46, 52, 64, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #4c566a;
+    box-shadow: 
+        inset 0 2px 10px rgba(0, 0, 0, 0.5),
+        0 4px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 2px rgba(163, 190, 140, 0.3);
+    line-height: 1.5;
+}
+
+.terminal-text .command {
+    color: #81a1c1;
+    font-weight: 600;
+}
+
+.terminal-text .path {
+    color: #88c0d0;
+}
+
+.terminal-text .output {
+    color: #d8dee9;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #a3be8c;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+    vertical-align: middle;
+    box-shadow: 0 0 5px rgba(163, 190, 140, 0.5);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .log-entry {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .vuln-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .vuln-risk {
+        align-self: flex-start;
+    }
+    
+    .progress-container {
+        padding: 15px;
+    }
+    
+    .progress-bar {
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .log-output {
+        padding: 10px;
+        font-size: 11px;
+    }
+    
+    .vuln-card {
+        padding: 15px;
+    }
+    
+    .vuln-title {
+        font-size: 1.1em;
+    }
+    
+    .vuln-details {
+        font-size: 0.9em;
+    }
+}
