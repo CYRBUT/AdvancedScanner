@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 CYRBUT
+Copyright (c) 2026 Advanced Security Scanner Team
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -9,13 +9,67 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. ETHICAL USE CLAUSE:
+   - This software may ONLY be used for:
+     * Authorized security testing of systems you own or have explicit written permission to test
+     * Educational purposes in controlled environments
+     * Legitimate penetration testing with proper authorization
+   - This software may NOT be used for:
+     * Unauthorized access to computer systems
+     * Illegal activities or cybercrime
+     * Violating privacy laws or regulations
+     * Testing systems without explicit permission
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. LIABILITY DISCLAIMER:
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+3. LEGAL COMPLIANCE:
+   The user agrees to comply with all applicable local, national, and international
+   laws and regulations regarding computer security and ethical hacking. This includes,
+   but is not limited to:
+   - The Computer Fraud and Abuse Act (CFAA) in the United States
+   - The General Data Protection Regulation (GDPR) in the European Union
+   - The Cybercrime Prevention Act in various jurisdictions
+   - Other relevant cybersecurity and privacy laws
+
+4. RESPONSIBLE DISCLOSURE:
+   If vulnerabilities are discovered using this software, users agree to follow
+   responsible disclosure practices, including:
+   - Notifying affected parties privately
+   - Allowing reasonable time for fixes before public disclosure
+   - Not exploiting vulnerabilities for personal gain
+
+5. EDUCATIONAL PURPOSE:
+   This software is intended for educational purposes to help security professionals
+   understand vulnerabilities and improve security practices. It should be used
+   responsibly and ethically.
+
+6. NO WARRANTY FOR MALICIOUS USE:
+   The authors explicitly disclaim any responsibility for damages, legal issues,
+   or other consequences resulting from the misuse of this software. Users assume
+   full responsibility for their actions when using this tool.
+
+7. GOVERNMENT USE:
+   For government and law enforcement use, additional restrictions and authorizations
+   may apply according to local laws and regulations.
+
+8. EXPORT CONTROL:
+   This software may be subject to export control regulations. Users are responsible
+   for compliance with all applicable export laws and regulations.
+
+By using this software, you acknowledge that:
+- You have read and understood this license agreement
+- You agree to use the software only for legal and ethical purposes
+- You accept full responsibility for your actions
+- You will not hold the authors liable for any misuse or damages
+
+Violation of these terms may result in:
+- Revocation of license to use the software
+- Legal action under applicable laws
+- Criminal prosecution where applicable
